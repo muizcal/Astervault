@@ -1,30 +1,30 @@
-# AsterVault 🏆
+# AsterVault 
 
 > Autonomous, non-custodial yield optimizer powered by AsterDEX Earn on BNB Chain
 
 ---
 
-## How It Meets Every Hackathon Requirement
 
-### ✅ INTEGRATE — AsterDEX Earn as Primary Yield Engine
+
+###  INTEGRATE — AsterDEX Earn as Primary Yield Engine
 - Users deposit BNB → vault calls `AsterEarn asBNB Minting` contract directly
 - Minting Contract: `0x2F31ab8950c50080E77999fa456372f276952fD8`
 - asBNB Token: `0x77734e70b6E88b4d82fE632a168EDf6e700912b6`
 - **AsterEarn is the ONLY yield source for the base layer**
 
-### ✅ STACK — Yield Compounding + PancakeSwap
+###  STACK — Yield Compounding + PancakeSwap
 - `compound()` harvests AsterEarn yield every 6 hours
 - Yield re-minted back into asBNB (compounding) OR
 - Routed to PancakeSwap BNB/USDT LP for additional yield stacking
 - `rotateStrategy()` switches between modes deterministically
 
-### ✅ AUTOMATE — Fully Programmatic
+###  AUTOMATE — Fully Programmatic
 - `compound()` is **permissionless** — anyone can call it
 - Designed for Gelato Network or Chainlink Automation keepers
 - **Zero manual buttons, zero multisig, zero off-chain triggers**
 - All logic is deterministic and on-chain
 
-### ✅ PROTECT — Non-Custodial & Decentralized
+###  PROTECT — Non-Custodial & Decentralized
 - **No admin keys** — constructor sets everything, no owner functions
 - **No upgradability** — immutable contract
 - Users hold `avBNB` ERC20 shares directly in their wallet
