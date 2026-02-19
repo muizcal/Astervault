@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #02040A;
+    color: #E8F0FE;
+    font-family: 'Space Grotesk', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #060C18; }
+  ::-webkit-scrollbar-thumb { background: #162840; border-radius: 2px; }
+}
+
+@layer components {
+  .card {
+    background: #0F1F38;
+    border: 1px solid #162840;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+
+  .gold-border {
+    border: 1px solid rgba(240,180,41,0.3);
+    box-shadow: 0 0 24px rgba(240,180,41,0.08), inset 0 0 24px rgba(240,180,41,0.02);
+  }
+
+  .teal-border {
+    border: 1px solid rgba(0,212,170,0.3);
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #F0B429, #C8941F);
+    color: #02040A;
+    font-weight: 700;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: all 0.2s;
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 0 32px rgba(240,180,41,0.4);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    border: 1px solid #162840;
+    color: #7A9CC0;
+    transition: all 0.2s;
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(240,180,41,0.3);
+    color: #F0B429;
+  }
+
+  .input-field {
+    background: rgba(6,12,24,0.9);
+    border: 1px solid #162840;
+    color: #E8F0FE;
+    font-family: 'IBM Plex Mono', monospace;
+    transition: all 0.2s;
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: rgba(240,180,41,0.5);
+    box-shadow: 0 0 0 3px rgba(240,180,41,0.08);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #F0B429, #C8941F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-teal {
+    background: linear-gradient(135deg, #00D4AA, #7C3AED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(22,40,64,0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22,40,64,0.4) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse-dot {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.count-animate {
+  animation: count-up 0.4s ease-out forwards;
+}

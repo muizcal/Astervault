@@ -1,0 +1,16 @@
+{
+  "name": "astervault-contracts",
+  "version": "1.0.0",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:bnb": "hardhat run scripts/deploy.js --network bnb",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network bnbTestnet",
+    "test": "hardhat test",
+    "verify": "hardhat verify --network bnb"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0",
+    "dotenv": "^16.4.5"
+  }
+}
