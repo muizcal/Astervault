@@ -265,6 +265,3 @@ Transaction 0x83b6cf06d85c909ca46850d46848e581bcca2f3b6bef4af957f630901e8955f4 s
 
 Built with Solidity, React, and determination.
 
-## License
-
-MIT License - See LICENSE file for details
