@@ -10,9 +10,10 @@ module.exports = {
   },
   networks: {
     bnb: {
-      url: "https://bsc-dataseed.binance.org/",
+      url: process.env.BNB_RPC_URL || "https://bsc.publicnode.com",
       chainId: 56,
       accounts: process.env.DEPLOYER_PRIVATE_KEY ? [process.env.DEPLOYER_PRIVATE_KEY] : [],
+      timeout: 120000,
     },
     bnbTestnet: {
       url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
